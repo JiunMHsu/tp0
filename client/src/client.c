@@ -58,7 +58,7 @@ int main(void)
 
 t_log *iniciar_logger(void)
 {
-	t_log *nuevo_logger = log_create("tp0.log", "client", 1, LOG_LEVEL_INFO);
+	t_log *nuevo_logger = log_create("tp0.log", "Client", 1, LOG_LEVEL_INFO);
 	return nuevo_logger;
 }
 
@@ -102,7 +102,6 @@ void paquete(int conexion)
 		agregar_a_paquete(paquete, leido, strlen(leido) + 1);
 		leido = readline("> ");
 	}
-
 	enviar_paquete(paquete, conexion);
 
 	// ¡No te olvides de liberar las líneas y el paquete antes de regresar!
